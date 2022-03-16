@@ -224,19 +224,15 @@ window.addEventListener("scroll", () => {
   river.style.top = `${value * 0.5}px`;
   boat.style.top = `${value * 0.5}px`;
   boat.style.left = `${value * 2}px`;
-  art.style.fontSize = `${value * 0.13}px`;
+  art.style.fontSize = `${value * 0.3}px`;
   let sy;
-  let fy;
   if (sphone.matches) {
-    sy = 243.5;
-    fy = "31.5px"
+    sy = 107;
   } else {
-    sy = 189;
-    fy = "48.5px"
-    art.style.fontSize = `${value * 0.25}px`;
+    sy = 92;
   }
   if (scrollY >= sy) {
-    art.style.fontSize = fy;
+    art.style.fontSize = `32px`;
     art.style.position = `fixed`;
     if (scrollY >= 500) {
       art.style.display = "none";
@@ -258,4 +254,3 @@ window.addEventListener("scroll", () => {
     document.querySelector("header").style.display = "block";
   }
 });
-
