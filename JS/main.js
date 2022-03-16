@@ -227,18 +227,20 @@ window.addEventListener("scroll", () => {
   art.style.fontSize = `${value * 0.3}px`;
   let sy;
   if (sphone.matches) {
-    sy = 107;
-  } else {
-    sy = 92;
-  }
-  if (scrollY >= sy) {
-    art.style.fontSize = `32px`;
-    art.style.position = `fixed`;
-    if (scrollY >= 500) {
-      art.style.display = "none";
-    } else {
-      art.style.display = `block`;
+    if (scrollY >= 107) {
+      art.style.fontSize = `32px`;
+      art.style.position = `fixed`;
     }
+  } else {
+    if (scrollY >= 150) {
+      art.style.fontSize = `45px`;
+      art.style.position = `fixed`;
+    }
+  }
+  if (scrollY >= 500) {
+    art.style.display = "none";
+  } else {
+    art.style.display = `block`;
   }
 
   if (scrollY >= 210) {
