@@ -217,40 +217,45 @@ let sphone = window.matchMedia("(max-width:767px)")
 
 window.addEventListener("scroll", () => {
   let value = scrollY;
-  stars.style.left = `${value * 0.5}px`;
-  moon.style.top = `${value * 3}px`;
-  mountain1.style.top = `${value * 1.5}px`;
-  mountain2.style.top = `${value * 1}px`;
-  river.style.top = `${value}px`;
-  boat.style.top = `${value}px`;
-  boat.style.left = `${value * 3}px`;
-  art.style.fontSize = `${value * .5}px`;
-  let sy
-  if(sphone.matches) {
-    sy = 62
-  }else {
-    sy = 92
+  stars.style.left = `${value * 0.3}px`;
+  moon.style.top = `${value * 2}px`;
+  mountain1.style.top = `${value * 1}px`;
+  mountain2.style.top = `${value * 0.5}px`;
+  river.style.top = `${value * 0.5}px`;
+  boat.style.top = `${value * 0.5}px`;
+  boat.style.left = `${value * 2}px`;
+  art.style.fontSize = `${value * 0.13}px`;
+  let sy;
+  let fy;
+  if (sphone.matches) {
+    sy = 243.5;
+    fy = "31.5px"
+  } else {
+    sy = 189;
+    fy = "48.5px"
+    art.style.fontSize = `${value * 0.25}px`;
   }
-    if (scrollY >= sy) {
-      art.style.fontSize = `${sy / 2}px`;
-      art.style.position = `fixed`;
-      if (scrollY >= 500) {
-        art.style.display = "none";
-      } else {
-        art.style.display = `block`;
-      }
+  if (scrollY >= sy) {
+    art.style.fontSize = fy;
+    art.style.position = `fixed`;
+    if (scrollY >= 500) {
+      art.style.display = "none";
+    } else {
+      art.style.display = `block`;
     }
-  
-  if (scrollY >= 146) {
+  }
+
+  if (scrollY >= 210) {
     document.querySelector("article").style.background =
       "linear-gradient(rgb(45, 181, 235), rgb(16, 0, 34))";
-  }else {
+  } else {
     document.querySelector("article").style.background =
       "linear-gradient(rgb(35, 7, 49), rgb(16, 0, 34))";
   }
-  if(scrollY >= 800) {
-    document.querySelector("header").style.display = "none"
-  }else {
+  if (scrollY >= 800) {
+    document.querySelector("header").style.display = "none";
+  } else {
     document.querySelector("header").style.display = "block";
   }
 });
+
