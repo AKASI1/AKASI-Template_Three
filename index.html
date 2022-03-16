@@ -63,25 +63,30 @@
 
   </nav>
 
-  <article>
+  <header>
     <div class="container">
-      <header>
-        <h3 class="logo">AKASI</h3>
-        <i class="fa-solid fa-bars-staggered"></i>
-        <ul>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#timeline">Timeline</a>
-          <a href="#features">Features</a>
-          <a href="#testimonials">Testimonials</a>
-        </ul>
-      </header>
+      <h3 class="logo">AKASI</h3>
+      <i class="fa-solid fa-bars-staggered"></i>
+      <ul>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#features">Features</a>
+        <a href="#testimonials">Testimonials</a>
+      </ul>
     </div>
-    <div class="text">
-      <h1>We Are <span>Creative</span> Agency</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam nesciunt quidem iste</p>
-    </div>
+  </header>
+
+  <article>
+    <img src="/IMG/stars1.png" id=stars>
+    <h1>We Are <span>Creative</span>Agency</h1>
+    <img src="/IMG/moon2.png" id="moon">
+    <img src="/IMG/mountains3.png" id="mountain1">
+    <img src="/IMG/mountains4.png" id="mountain2">
+    <img src="/IMG/river5.png" id="river">
+    <img src="/IMG/boat6.png" id="boat">
+    <img src="/IMG/mountains7.png" id="mountain3">
   </article>
 
   <section class="about" id="about">
@@ -264,20 +269,20 @@
   <section class="contact">
     <h1 class="title">Contact Us</h1>
     <div class="container">
-      <form action="">
+      <form action="https://formspree.io/f/myyoppog" method="post">
         <div class="left">
-          <input type="text" placeholder="Your Name" name="username">
-          <input type="number" placeholder="Your Phone" name="phone">
-          <input type="email" placeholder="Your email" name="email">
+          <input type="text" placeholder="Your Name" name="Username">
+          <input type="number" placeholder="Your Phone" name="Phone">
+          <input type="email" placeholder="Your email" name="Email">
           <div class="gender">
-              <input type="radio" name="gender">
-              <label for="gender">Male</label>
-              <input type="radio" name="gender">
-              <label for="gender">Female</label>
+            <input type="radio" value="Male" name="Gender">
+            <label for="gender">Male</label>
+            <input type="radio" value="Female" name="Gender">
+            <label for="gender">Female</label>
           </div>
         </div>
         <div class="right">
-          <textarea name="message" placeholder="Your Message" maxlength="100"></textarea>
+          <textarea name="Message" placeholder="Your Message" maxlength="100"></textarea>
           <div class="progress"></div>
           <input type="submit" value="Send">
         </div>
