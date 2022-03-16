@@ -92,19 +92,19 @@ document.querySelector(".settingBox .reset").onclick = () => {
 // End Setting Box
 
 // Change Landing Page Background
-let imgArray = ["01", "02", "04", "05", "07", "08", "10"];
+// let imgArray = ["01", "02", "04", "05", "07", "08", "10"];
 
-function randomizeImgs() {
-  if (backgroundOption === true) {
-    chbackground = setInterval(() => {
-      let r = imgArray[Math.floor(Math.random() * imgArray.length)];
-      document.querySelector(
-        "article"
-      ).style.backgroundImage = `url(/IMG/${r}.jpeg)`;
-    }, 5000);
-  }
-}
-randomizeImgs();
+// function randomizeImgs() {
+//   if (backgroundOption === true) {
+//     chbackground = setInterval(() => {
+//       let r = imgArray[Math.floor(Math.random() * imgArray.length)];
+//       document.querySelector(
+//         "article"
+//       ).style.backgroundImage = `url(/IMG/${r}.jpeg)`;
+//     }, 5000);
+//   }
+// }
+// randomizeImgs();
 
 // Skills Show
 window.addEventListener("scroll", () => {
@@ -182,12 +182,12 @@ txtarea.oninput = () => {
 //Togelle Menu
 let links = document.querySelector("header ul");
 let menuShown = false;
-document.querySelector("header > i").onclick = () => {
+document.querySelector("header i").onclick = () => {
   if (!menuShown) {
     links.style.display = "flex";
     menuShown = true;
     let overlay = document.createElement("div");
-    overlay.className = "menu-overlay"
+    overlay.className = "menu-overlay";
     overlay.style.cssText =
       "position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,.6); z-index:199;";
     document.body.appendChild(overlay);
@@ -202,4 +202,55 @@ document.querySelectorAll("header ul a").forEach((l) => {
     links.style.display = "none";
     document.querySelector(".menu-overlay").remove();
   });
+});
+
+//Landing Animation
+let stars = document.getElementById("stars");
+let moon = document.getElementById("moon");
+let mountain1 = document.getElementById("mountain1");
+let mountain2 = document.getElementById("mountain2");
+let river = document.getElementById("river");
+let boat = document.getElementById("boat");
+let art = document.querySelector("article > h1");
+
+let sphone = window.matchMedia("(max-width:767px)")
+
+window.addEventListener("scroll", () => {
+  let value = scrollY;
+  stars.style.left = `${value * 0.5}px`;
+  moon.style.top = `${value * 3}px`;
+  mountain1.style.top = `${value * 1.5}px`;
+  mountain2.style.top = `${value * 1}px`;
+  river.style.top = `${value}px`;
+  boat.style.top = `${value}px`;
+  boat.style.left = `${value * 3}px`;
+  art.style.fontSize = `${value * .5}px`;
+  let sy
+  if(sphone.matches) {
+    sy = 62
+  }else {
+    sy = 92
+  }
+    if (scrollY >= sy) {
+      art.style.fontSize = `${sy / 2}px`;
+      art.style.position = `fixed`;
+      if (scrollY >= 500) {
+        art.style.display = "none";
+      } else {
+        art.style.display = `block`;
+      }
+    }
+  
+  if (scrollY >= 146) {
+    document.querySelector("article").style.background =
+      "linear-gradient(rgb(45, 181, 235), rgb(16, 0, 34))";
+  }else {
+    document.querySelector("article").style.background =
+      "linear-gradient(rgb(35, 7, 49), rgb(16, 0, 34))";
+  }
+  if(scrollY >= 800) {
+    document.querySelector("header").style.display = "none"
+  }else {
+    document.querySelector("header").style.display = "block";
+  }
 });
