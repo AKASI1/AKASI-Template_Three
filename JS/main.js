@@ -108,7 +108,7 @@ document.querySelector(".settingBox .reset").onclick = () => {
 
 // Skills Show
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= document.querySelector(".about").offsetTop) {
+  if (window.scrollY >= document.querySelector(".skills").offsetTop - 400) {
     document.querySelectorAll(".skills .skill-progress span").forEach((s) => {
       s.style.width = s.dataset.progress;
     });
