@@ -214,7 +214,6 @@ let boat = document.getElementById("boat");
 let art = document.querySelector("article > h1");
 
 let sphone = window.matchMedia("(max-width:767px)")
-
 window.addEventListener("scroll", () => {
   let value = scrollY;
   stars.style.left = `${value * 0.3}px`;
