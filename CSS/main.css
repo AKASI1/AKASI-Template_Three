@@ -217,7 +217,7 @@ nav .bullet:hover .tooltip {
 header {
   width: 100%;
   position: fixed;
-  z-index: 99;
+  z-index: 200;
   display: block;
 }
 header .container {
