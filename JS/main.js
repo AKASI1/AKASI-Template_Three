@@ -242,7 +242,7 @@ window.addEventListener("scroll", () => {
     art.style.display = `block`;
   }
 
-  if (scrollY >= 210) {
+  if (scrollY >= 200) {
     document.querySelector("article").style.background =
       "linear-gradient(rgb(45, 181, 235), rgb(16, 0, 34))";
   } else {
