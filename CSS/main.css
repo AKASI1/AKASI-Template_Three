@@ -80,7 +80,7 @@ section {
   min-height: 100vh;
   background-color: rgba(12, 12, 12, 0.479);
   transition: 0.3s;
-  z-index: 100;
+  z-index: 201;
   text-align: center;
 }
 .settingBox.opened {
@@ -103,7 +103,6 @@ section {
   padding: 10px;
   margin: 10px;
   border-radius: 6px;
-  z-index: 201;
 }
 .optionBox h4 {
   color: #555;
